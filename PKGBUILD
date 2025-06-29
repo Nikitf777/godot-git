@@ -51,7 +51,7 @@ pkgver() {
 build() {
     cd "${srcdir}"/${_pkgname}
     # by default built using LTO, use `lto=none` to disable
-    scons platform=linuxbsd target=editor production=yes werror=no -j$(($(nproc) + 1))
+    scons platform=linuxbsd target=editor production=yes werror=no -j $(nproc)
 }
 
 package() {
