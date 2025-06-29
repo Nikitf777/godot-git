@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Godot
+Name=Godot Git
 Comment=Application for making games
-Exec=/usr/bin/godot %U
-Icon=godot
+Exec=/usr/bin/godot-git %U
+Icon=godot-git
 Terminal=false
 Type=Application
 Categories=Development;
