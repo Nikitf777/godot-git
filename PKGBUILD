@@ -20,8 +20,8 @@ depends=(freetype2 graphite harfbuzz harfbuzz-icu libglvnd libspeechd
     libxinerama libxrandr miniupnpc pcre2)
 optdepends=('pipewire-alsa: for audio support'
     'pipewire-pulse: for audio support')
-conflicts=("godot")
-provides=("godot")
+conflicts=("godot-git")
+provides=("godot-git")
 _arch=''
 if test "$CARCH" == x86_64; then
     _arch=('x86_64')
@@ -36,7 +36,7 @@ source=(
 )
 sha256sums=(
     'SKIP'
-    '2ae039a3879b23e157f2125e0b326fa1ef66d56bfd596c790e8943d27652e93a'
+    '5f4836797ccad5542e5a3850c85bf4073f8f7923c8098d6dc16353ed6b5e6cde'
     '99f9d17c4355b274ef0c08069cf6e756a98cd5c9d9d22d1b39f79538134277e1'
 )
 
@@ -58,11 +58,11 @@ package() {
 
     cd "${srcdir}"
 
-    install -Dm644 godot.desktop "${pkgdir}"/usr/share/applications/godot.desktop
-    install -Dm644 icon.png "${pkgdir}"/usr/share/pixmaps/godot.png
+    install -Dm644 godot.desktop "${pkgdir}"/usr/share/applications/godot-git.desktop
+    install -Dm644 icon.png "${pkgdir}"/usr/share/pixmaps/godot-git.png
 
     cd "${srcdir}"/${_pkgname}
 
-    install -D -m755 bin/godot.linuxbsd.editor.${_arch} "${pkgdir}"/usr/bin/godot
+    install -D -m755 bin/godot.linuxbsd.editor.${_arch} "${pkgdir}"/usr/bin/godot-git
     install -D -m644 LICENSE.txt "${pkgdir}"/usr/share/licenses/godot-git/LICENSE
 }
