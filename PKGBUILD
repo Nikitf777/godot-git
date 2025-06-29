@@ -30,7 +30,7 @@ else
 fi
 
 source=(
-    "${_pkgname}::git+https://github.com/godotengine/godot.git"
+    "${_pkgname}::git+https://github.com/Nikitf777/godot.git"
     godot.desktop
     icon.png
 )
@@ -51,6 +51,7 @@ pkgver() {
 build() {
     cd "${srcdir}"/${_pkgname}
     # by default built using LTO, use `lto=none` to disable
+    git checkout my-custom
     scons platform=linuxbsd target=editor production=yes werror=no -j $(nproc)
 }
 
