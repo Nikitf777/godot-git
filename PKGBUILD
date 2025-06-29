@@ -14,10 +14,10 @@ url="https://godotengine.org/"
 license=('MIT')
 arch=('i686' 'x86_64')
 
-makedepends=(git alsa-lib scons wayland yasm)
-depends=(embree3 freetype2 graphite harfbuzz harfbuzz-icu libglvnd libspeechd
+makedepends=(git alsa-lib scons wayland)
+depends=(freetype2 graphite harfbuzz harfbuzz-icu libglvnd libspeechd
     libsquish libtheora libvorbis libwebp libwslay libxcursor libxi
-    libxinerama libxrandr mbedtls2 miniupnpc pcre2)
+    libxinerama libxrandr miniupnpc pcre2)
 optdepends=('pipewire-alsa: for audio support'
     'pipewire-pulse: for audio support')
 conflicts=("godot")
